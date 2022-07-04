@@ -21,7 +21,7 @@ function pixels(value) {
   painel.style.maxWidth = value * 40 + 'px';
   for (index = 0; index < value * value; index += 1) {
     let pixel = document.createElement('div');
-    pixel.className = 'pixel-painel';
+    pixel.className = 'pixel';
     pixel.addEventListener('click', mudaCor);
     painel.appendChild(pixel);
   }
