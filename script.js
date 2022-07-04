@@ -1,11 +1,30 @@
-let painel = document.getElementById('pixel-painel')
+let painel = document.getElementById('pixel-painel-board');
+let corAtual = document.getElementsByClassName('selected');
 
-function pixels(){
-    let pixel = document.createElement('div');
-    pixel.className = 'pixel-painel';
-    for (index = 0; index < 5; index +=1){
-        painel.appendChild(pixel);
-    }
+function mudaCor(event) {
+  let alvo = document.getElementsByClassName('');
 }
 
-window.onload = pixels(5);
+function limpapixel() {
+  while (painel.children.length != 0) {
+    painel.removeChild(painel.firstElementChild);
+  }
+}
+
+function pixels(value) {
+  limpapixel();
+  if (value > 50) {
+    value = 50;
+  } else if (value < 5) {
+    value = 5;
+  }
+  painel.style.maxWidth = value * 40 + 'px';
+  for (index = 0; index < value * value; index += 1) {
+    let pixel = document.createElement('div');
+    pixel.className = 'pixel-painel';
+    pixel.addEventListener('click', mudaCor);
+    painel.appendChild(pixel);
+  }
+}
+
+pixels(5);

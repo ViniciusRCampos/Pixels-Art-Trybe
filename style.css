@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 .color{
@@ -22,10 +23,12 @@
 #fourth-color{
     background-color: green;
 }
-#pixel-painel{
-    display: flex;
-    width: 200px;
+#pixel-painel-board{
+    display: block;
+    max-width: 210px;
     height: 200px;
+    line-height: 0px;
+    
 }
 .pixel-painel{
     width: 40px;
