@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.color{
+    border: 1px solid black;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+#first-color{
+    background-color: black;
+}
+#second-color{
+    background-color: red;
+}
+#third-color{
+    background-color: blue;
+}
+#fourth-color{
+    background-color: green;
+}
+#pixel-painel{
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+.pixel-painel{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+#color-palette{
+    display: flex;
+
+}
