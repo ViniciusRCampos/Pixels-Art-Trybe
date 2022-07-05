@@ -31,7 +31,7 @@ header {
 #fourth-color {
   background-color: green;
 }
-#pixel-painel-board {
+#pixel-board {
   display: inline-block;
   max-width: 210px;
   height: 200px;
