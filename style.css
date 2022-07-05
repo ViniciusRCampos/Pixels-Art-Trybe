@@ -1,44 +1,107 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+header {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 35px;
+  color: purple;
+}
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 3px;
+  border-radius: 0% 0% 35% 35%;
 }
 
-.color{
-    border: 1px solid black;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
+#first-color {
+  background-color: black;
+}
+#second-color {
+  background-color: red;
+}
+#third-color {
+  background-color: blue;
+}
+#fourth-color {
+  background-color: green;
+}
+#pixel-painel-board {
+  display: inline-block;
+  max-width: 210px;
+  height: 200px;
+  line-height: 0px;
 }
 
-#first-color{
-    background-color: black;
+#white-color {
+  background-color: rgb(255, 255, 255);
 }
-#second-color{
-    background-color: red;
-}
-#third-color{
-    background-color: blue;
-}
-#fourth-color{
-    background-color: green;
-}
-#pixel-painel-board{
-    display: block;
-    max-width: 210px;
-    height: 200px;
-    line-height: 0px;
-    
-}
-.pixel{
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    border: 1px solid black;
-    display: inline-block;
+.pixel {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
 }
 
-#color-palette{
-    display: flex;
+#color-palette {
+  display: inline-block;
+  //max-width: 210px;
+  border: 2px solid black;
+  align-items: center;
+  margin-bottom: 100px;
+  background-color: rgb(230, 230, 230);
+  position: fixed;
+}
+#button-random {
+  width: 55px;
+  margin-top: 3px;
+  height: 40px;
+  position: fixed;
+}
 
+#choose-color {
+  margin-left: 160px;
+  width: 30px;
+  margin-top: 30px;
+  height: 20px;
+  position: fixed;
+}
+#choose-input {
+  margin-left: 120px;
+  margin-top: 3px;
+  width: 70px;
+  height: 20px;
+  position: fixed;
+}
+.defined {
+  margin-left: 200px;
+}
+
+.centralizar {
+  border: 3px solid black;
+  align-items: center;
+  text-align: center;
+}
+
+#palette-board {
+  height: 160px;
+  margin-top: 5px;
+}
+
+#actual-color {
+  display: block;
+}
+.actual {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-bottom: 3px;
+  background-color: black;
 }

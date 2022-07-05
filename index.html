@@ -1,24 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-       <meta charset="UTF-8"/>
-       <title>Pixels Art</title> 
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header class = "cabecalho">
-            <h1 id="title">Paleta de Cores</h1>
-        </header>
-        <section class = "palette-section" id="color-palette">
-            <div class="color selected" id="first-color"></div>
-            <div class="color" id="second-color"></div>
-            <div class="color" id="third-color"></div>
-            <div class="color" id="fourth-color"></div>
-        </section>
-        <section id = "pixel-painel-board">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pixels Art</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1 id="title">Paleta de Cores</h1>
+    </header>
+    <div id="palette-board">
+      <section class="palette-section" id="color-palette">
+        <div class="color selected" id="first-color"></div>
+        <div class="color" id="second-color"></div>
+        <div class="color" id="third-color"></div>
+        <div class="color" id="fourth-color"></div>
+        <div class="color" id="white-color"></div>
+        <div class="color random"></div>
+        <div class="color random"></div>
+        <div class="color random"></div>
+        <div class="color random"></div>
+        <div class="color random"></div>
+        <div class="color random"></div>
+        <div class="color random"></div>
+        <div class="color random"></div>
+        <div class="color random"></div>
+        <div class="color random"></div>
+        <div class="color random"></div>
+        <div class="color random"></div>
+        <div class="color random"></div>
+        <div class="color random"></div>
+        <button type="button" id="button-random">Novas Cores</button>
+        <input type="text" value="salmon" id="choose-input" />
+        <button type="button" id="choose-color">Cor</button>
+        <div class="color defined"></div>
+        <div id="actual-color">
+          <p><strong>Cor Atual</strong></p>
+          <div class="actual"></div>
+        </div>
+      </section>
+    </div>
 
-        </section>
-        <script src="script.js"></script>
-    </body>
-
+    <div class="centralizar">
+      <section>
+        <p>
+          Digite o tamanho do seu quadro. Mínimo 5. Máximo 50.<br />Valores
+          abaixo de 5, serão considerados 5<br />Valores maiores do que 50,
+          serão considerados 50.
+        </p>
+        <input type="number" min="5" max="50" id="board-size" value="5" />
+        <button type="button" id="button-vqv">#VQV</button>
+        <button type="button" id="clear-board">Limpar</button>
+      </section>
+      <section id="pixel-painel-board"></section>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
