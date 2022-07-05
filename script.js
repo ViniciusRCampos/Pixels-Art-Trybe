@@ -1,4 +1,4 @@
-let painel = document.getElementById('pixel-painel-board');
+let painel = document.getElementById('pixel-board');
 let corAtual = document.querySelector('.selected');
 let cssObj = window.getComputedStyle(corAtual, null);
 let cores = document.getElementsByClassName('color');
@@ -16,7 +16,7 @@ function color() {
 }
 
 function randomColor() {
-  for (index = 0; index < random.length; index += 1) {
+  for (let index = 0; index < random.length; index += 1) {
     let r = Math.random() * 255;
     let g = Math.random() * 255;
     let b = Math.random() * 255;
@@ -36,7 +36,7 @@ function selecionaCor(event) {
 }
 
 function clickCor() {
-  for (index = 0; index < cores.length; index += 1) {
+  for (let index = 0; index < cores.length; index += 1) {
     cores[index].addEventListener('click', selecionaCor);
   }
 }
@@ -71,7 +71,7 @@ function pixels() {
   let value = inputValue();
 
   painel.style.maxWidth = value * 40 + 'px';
-  for (index = 0; index < value * value; index += 1) {
+  for (let index = 0; index < value * value; index += 1) {
     let pixel = document.createElement('div');
     pixel.className = 'pixel';
     pixel.addEventListener('click', mudaCor);
@@ -82,11 +82,11 @@ function pixels() {
 function clear() {
   limpapixel();
   painel.style.maxWidth = 5 * 40 + 'px';
-  for (index = 0; index < 25; index += 1) {
-    let pixel = document.createElement('div');
-    pixel.className = 'pixel';
-    pixel.addEventListener('click', mudaCor);
-    painel.appendChild(pixel);
+  for (let index = 0; index < 25; index += 1) {
+    let pixel2 = document.createElement('div');
+    pixel2.className = 'pixel';
+    pixel2.addEventListener('click', mudaCor);
+    painel.appendChild(pixel2);
   }
 }
 
