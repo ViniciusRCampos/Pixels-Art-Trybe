@@ -1,15 +1,15 @@
-let painel = document.getElementById('pixel-board');
+const painel = document.getElementById('pixel-board');
 let corAtual = document.querySelector('.selected');
 let cssObj = window.getComputedStyle(corAtual, null);
-let cores = document.getElementsByClassName('color');
+const cores = document.getElementsByClassName('color');
 let botao = document.getElementById('generate-board');
 let valor = document.getElementById('board-size').value;
 let random = document.getElementsByClassName('random');
-let botaoRandom = document.getElementById('button-random');
-let botaoChoose = document.getElementById('choose-color');
-let defined = document.querySelector('.defined');
-let actualColor = document.querySelector('.actual');
-let botaoLimpar = document.getElementById('clear-board');
+//let botaoRandom = document.getElementById('button-random');
+//let botaoChoose = document.getElementById('choose-color');
+//let defined = document.querySelector('.defined');
+const actualColor = document.querySelector('.actual');
+const botaoLimpar = document.getElementById('clear-board');
 
 function color() {
   defined.style.backgroundColor = document.getElementById('choose-input').value;
@@ -20,8 +20,7 @@ function randomColor() {
     let r = Math.random() * 255;
     let g = Math.random() * 255;
     let b = Math.random() * 255;
-    random[index].style.backgroundColor =
-      'rgb(' + r + ' ,' + g + ' ,' + b + ')';
+    random[index].style.backgroundColor = `rgb(${r} ,${g} ,${b})`;
   }
 }
 
@@ -31,8 +30,7 @@ function selecionaCor(event) {
   this.classList.add('selected');
   corAtual = document.querySelector('.selected');
   cssObj = window.getComputedStyle(corAtual, null);
-  actualColor.style.backgroundColor =
-    cssObj.getPropertyValue('background-color');
+  actualColor.style.backgroundColor = cssObj.getPropertyValue('background-color');
 }
 
 function clickCor() {
@@ -44,12 +42,11 @@ function clickCor() {
 function mudaCor(event) {
   console.log(event.target);
   //recebeID(corAtual)
-  event.target.style.backgroundColor =
-    cssObj.getPropertyValue('background-color');
+  event.target.style.backgroundColor = cssObj.getPropertyValue('background-color');
 }
 
 function limpapixel() {
-  while (painel.children.length != 0) {
+  while (painel.children.length !== 0) {
     painel.removeChild(painel.firstElementChild);
   }
 }
@@ -62,17 +59,20 @@ function inputValue() {
   } else if (valor < 5) {
     valor = 5;
     alert('Board invalido!');
+  } else if (valor === null){
+    valor = 5;
+    alert('Board invalido!');
   }
   return valor;
 }
 
 function pixels() {
   limpapixel();
-  let value = inputValue();
+  const value = inputValue();
 
-  painel.style.maxWidth = value * 40 + 'px';
+  painel.style.maxWidth = `${value * 40}px`;
   for (let index = 0; index < value * value; index += 1) {
-    let pixel = document.createElement('div');
+    const pixel = document.createElement('div');
     pixel.className = 'pixel';
     pixel.addEventListener('click', mudaCor);
     painel.appendChild(pixel);
@@ -81,9 +81,9 @@ function pixels() {
 
 function clear() {
   limpapixel();
-  painel.style.maxWidth = 5 * 40 + 'px';
+  painel.style.maxWidth = `200px`;
   for (let index = 0; index < 25; index += 1) {
-    let pixel2 = document.createElement('div');
+    const pixel2 = document.createElement('div');
     pixel2.className = 'pixel';
     pixel2.addEventListener('click', mudaCor);
     painel.appendChild(pixel2);
