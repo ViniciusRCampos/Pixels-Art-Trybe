@@ -7,7 +7,7 @@ let valor = document.getElementById('board-size').value;
 let random = document.getElementsByClassName('random');
 //let botaoRandom = document.getElementById('button-random');
 //let botaoChoose = document.getElementById('choose-color');
-//let defined = document.querySelector('.defined');
+const defined = document.querySelector('.defined');
 const actualColor = document.querySelector('.actual');
 const botaoLimpar = document.getElementById('clear-board');
 
