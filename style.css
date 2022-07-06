@@ -47,7 +47,7 @@ header {
 }
 
 #color-palette {
-  display: inline-block;
+  display: inline;
   border: 2px solid black;
   align-items: center;
   margin-bottom: 100px;
