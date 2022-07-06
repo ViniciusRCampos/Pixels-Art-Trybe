@@ -58,10 +58,10 @@ function inputValue() {
   valor = document.getElementById('board-size').value;
   if (valor > 50) {
     valor = 50;
-    alert('Board invalido');
+    alert('Board invalido!');
   } else if (valor < 5) {
     valor = 5;
-    alert('Board invalido');
+    alert('Board invalido!');
   }
   return valor;
 }

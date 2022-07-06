@@ -23,13 +23,13 @@ header {
   background-color: black;
 }
 #second-color {
-  background-color: red;
+  
 }
 #third-color {
-  background-color: blue;
+  
 }
 #fourth-color {
-  background-color: green;
+  
 }
 #pixel-board {
   display: inline-block;
@@ -52,7 +52,6 @@ header {
   align-items: center;
   margin-bottom: 100px;
   background-color: rgb(230, 230, 230);
-  align-items: center;
   text-align: center;
 
 }
@@ -94,14 +93,15 @@ header {
 
 #actual-color {
   display: block;
+  text-align: left;
 }
 .actual {
-  width: 40px;
-  height: 40px;
-  border: 1px solid black;
-  border-radius: 50%;
-  margin-bottom: 3px;
-  background-color: black;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-bottom: 3px;
+    background-color: black;
 }
 
 .random{
