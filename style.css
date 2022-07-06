@@ -101,3 +101,12 @@ header {
   margin-bottom: 3px;
   background-color: black;
 }
+
+.random{
+    border: 1px solid black;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+    border-radius: 0% 0% 35% 35%;
+}
