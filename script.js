@@ -91,9 +91,9 @@ function clear() {
 }
 
 botaoLimpar.addEventListener('click', clear);
-botaoChoose.addEventListener('click', color);
+//botaoChoose.addEventListener('click', color);
 botao.addEventListener('click', pixels);
-botaoRandom.addEventListener('click', randomColor);
+//botaoRandom.addEventListener('click', randomColor);
 randomColor();
 pixels();
 clickCor();
