@@ -34,7 +34,7 @@ header {
 }
 #pixel-board {
   display: inline-block;
-  max-width: 210px;
+  min-width: 210px;
   height: 200px;
   line-height: 0px;
 }

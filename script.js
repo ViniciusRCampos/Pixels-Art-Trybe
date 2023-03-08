@@ -28,8 +28,7 @@ function selecionaCor() {
   this.classList.add('selected');
   corAtual = document.querySelector('.selected');
   cssObj = window.getComputedStyle(corAtual, null);
-  actualColor.style.backgroundColor =
-    cssObj.getPropertyValue('background-color');
+  actualColor.style.backgroundColor = cssObj.getPropertyValue('background-color');
 }
 
 function randomColor() {
@@ -106,12 +105,18 @@ function pixels() {
   limpapixel();
   const value = inputValue();
 
-  painel.style.maxWidth = `${value * 40}px`;
-  for (let index = 0; index < value * value; index += 1) {
-    const pixel = document.createElement('div');
-    pixel.className = 'pixel';
-    pixel.addEventListener('click', mudaCor);
-    painel.appendChild(pixel);
+  // painel.style.maxWidth = `${value * 40}px`;
+  for (let i = 0; i < value; i += 1) {
+    const linha = document.createElement('div');
+    linha.className = 'line';
+    painel.appendChild(linha);
+    for (let index = 0; index < value; index += 1) {
+      const line = document.getElementsByClassName('line');
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      pixel.addEventListener('click', mudaCor);
+      line[i].appendChild(pixel);
+    }
   }
 }
 
@@ -126,12 +131,19 @@ function clearColor() {
 
 function clear() {
   limpapixel();
-  painel.style.maxWidth = '200px';
-  for (let index = 0; index < 25; index += 1) {
-    const pixel2 = document.createElement('div');
-    pixel2.className = 'pixel';
-    pixel2.addEventListener('click', mudaCor);
-    painel.appendChild(pixel2);
+  const value = 5;
+
+  for (let i = 0; i < value; i += 1) {
+    const linha = document.createElement('div');
+    linha.className = 'line';
+    painel.appendChild(linha);
+    for (let index = 0; index < value; index += 1) {
+      const line = document.getElementsByClassName('line');
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      pixel.addEventListener('click', mudaCor);
+      line[i].appendChild(pixel);
+    }
   }
 }
 
